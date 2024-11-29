@@ -15,18 +15,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"
+    />
     <title>Excite Code</title>
   </head>
   <body>
     <!--
-・お問い合わせボタンのホバー時の処理がない？
 ・レスポンシブ時のNewsの目次のCSS当たってない？
 ！-->
 
     <!--header-->
     <header class="header">
       <h1 class="header__logo">
-        <img src="images/logo-1.svg" alt="企業ロゴ" />
+        <img src="images/logo-1.svg" alt="企業ロゴ" class="normal-logo" />
+        <img src="images/logo.svg" alt="企業ロゴ" class="burger-logo" />
       </h1>
       <nav class="header__nav">
         <ul class="header__nav--list">
@@ -52,6 +60,28 @@
         </button>
         <span class="burger-musk"></span>
       </nav>
+      <ul class="burger__nav">
+        <li class="burger__nav--item"><a href="#" class="white">TOP</a></li>
+        <li class="burger__nav--item"><a href="#" class="white">ABOUT</a></li>
+        <li class="burger__nav--item">
+          <a href="#" class="white">SERVICE</a>
+        </li>
+        <li class="burger__nav--item"><a href="#" class="white">WORKS</a></li>
+        <li class="burger__nav--item"><a href="#" class="white">NEWS</a></li>
+        <li class="burger__nav--item">
+          <a href="#" class="white">CONTACT</a>
+        </li>
+        <li class="burger__nav--item">
+          <a href="#" class="white">プライバシーポリシー</a>
+        </li>
+        <li class="burger__nav--item">
+          <div class="burger__logo--flex">
+            <a href="#" class="logo"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="logo"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="logo"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </li>
+      </ul>
     </header>
     <!--fv-->
     <section class="fv">
@@ -62,7 +92,15 @@
     </section>
     <!--flow-->
     <section class="flow">
-      <p class="flow__sentence">Good life for Good Car</p>
+      <div class="flow__slider" id="js-slick-slider">
+        <ul>
+          <li>Good</li>
+          <li>life</li>
+          <li>for</li>
+          <li>Good</li>
+          <li>Car</li>
+        </ul>
+      </div>
     </section>
     <!--about-->
     <main>
@@ -89,7 +127,7 @@
       </section>
       <!--service-->
       <section class="service">
-        <h3 class="section-title">Service</h3>
+        <h3 class="section-title animated__fadeIn-1">Service</h3>
         <ul class="service__card-list">
           <li class="service__group">
             <div class="service__background-image1">
@@ -150,46 +188,52 @@
       <!--works-->
       <section class="works">
         <div class="works__wrapper">
-          <h3 class="section-title">Works</h3>
+          <h3 class="section-title animated__fadeIn-2">Works</h3>
           <ul class="works__list">
-            <li class="works__item">
-              <img src="images/top__works1.jpg" alt="仕事例のイメージ" />
-              <div class="works__item--main">
-                <p class="item__tag">修理・整備</p>
-                <p class="item__title">
-                  車のドアが開けられなくなった｜ドアロックの交換と...
-                </p>
-                <p class="item__beginning">
-                  弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
-                </p>
-                <p class="item__date">2022.09.02</p>
-              </div>
+            <li class="works__item animated__fadeIn-4">
+              <a class="works__item-link" href="#">
+                <img src="images/top__works1.jpg" alt="仕事例のイメージ" />
+                <div class="works__item--main">
+                  <p class="item__tag">修理・整備</p>
+                  <p class="item__title">
+                    車のドアが開けられなくなった｜ドアロックの交換と...
+                  </p>
+                  <p class="item__beginning">
+                    弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                  </p>
+                  <p class="item__date">2022.09.02</p>
+                </div>
+              </a>
             </li>
-            <li class="works__item">
-              <img src="images/top__works2.jpg" alt="仕事例のイメージ" />
-              <div class="works__item--main">
-                <p class="item__tag">修理・整備</p>
-                <p class="item__title">
-                  愛車のリアバンパーに傷がついた｜板金修理と塗装で...
-                </p>
-                <p class="item__beginning">
-                  弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
-                </p>
-                <p class="item__date">2022.08.26</p>
-              </div>
+            <li class="works__item animated__fadeIn-4">
+              <a class="works__item-link" href="#">
+                <img src="images/top__works2.jpg" alt="仕事例のイメージ" />
+                <div class="works__item--main">
+                  <p class="item__tag">修理・整備</p>
+                  <p class="item__title">
+                    愛車のリアバンパーに傷がついた｜板金修理と塗装で...
+                  </p>
+                  <p class="item__beginning">
+                    弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                  </p>
+                  <p class="item__date">2022.08.26</p>
+                </div>
+              </a>
             </li>
-            <li class="works__item">
-              <img src="images/top__works3.jpg" alt="仕事例のイメージ" />
-              <div class="works__item--main">
-                <p class="item__tag">購入サポート</p>
-                <p class="item__title">
-                  はじめて輸入車の購入を検討中のお客様｜憧れのBM...
-                </p>
-                <p class="item__beginning">
-                  弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
-                </p>
-                <p class="item__date">2022.08.20</p>
-              </div>
+            <li class="works__item animated__fadeIn-4">
+              <a class="works__item-link" href="#">
+                <img src="images/top__works3.jpg" alt="仕事例のイメージ" />
+                <div class="works__item--main">
+                  <p class="item__tag">購入サポート</p>
+                  <p class="item__title">
+                    はじめて輸入車の購入を検討中のお客様｜憧れのBM...
+                  </p>
+                  <p class="item__beginning">
+                    弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                  </p>
+                  <p class="item__date">2022.08.20</p>
+                </div>
+              </a>
             </li>
             <a class="top-button" href="#">
               READ MORE<img
@@ -206,8 +250,8 @@
         <div class="news__wrapper">
           <div class="news__flex">
             <div class="news__side">
-              <h3 class="section-title">News</h3>
-              <ul class="news__side-menu">
+              <h3 class="section-title animated__fadeIn-3">News</h3>
+              <ul class="news__side-menu animated__fadeIn-5">
                 <div class="news__side-menu--flex">
                   <li class="news__side-menu--item">すべてのお知らせ</li>
                   <li class="news__side-menu--item">トピックス</li>
@@ -219,44 +263,59 @@
               </ul>
             </div>
             <ul class="news__main-list">
-              <li class="news__main-list--item">
-                <p class="item__date">2022.09.02</p>
-                <span class="news__tag">トピックス</span
-                ><span class="news__tag">イベント・キャンペーン</span>
-                <p class="news__title">
-                  2022年10月8日・9日・10日の3日間、試乗車フェアを開催します
-                </p>
+              <li class="news__main-list--item animated__fadeIn-6">
+                <a href="#" class="news__main-list--link">
+                  <p class="item__date">2022.09.02</p>
+                  <span class="news__tag">トピックス</span
+                  ><span class="news__tag">イベント・キャンペーン</span>
+                  <br />
+                  <p class="news__title">
+                    2022年10月8日・9日・10日の3日間、試乗車フェアを開催します
+                  </p>
+                </a>
               </li>
-              <li class="news__main-list--item">
-                <p class="item__date">2022.09.02</p>
-                <span class="news__tag">トピックス</span
-                ><span class="news__tag">イベント・キャンペーン</span>
-                <p class="news__title">
-                  【入庫車のご案内】メルセデスベンツG 350が入庫しました
-                </p>
+              <li class="news__main-list--item animated__fadeIn-6">
+                <a href="#" class="news__main-list--link">
+                  <p class="item__date">2022.09.02</p>
+                  <span class="news__tag">トピックス</span
+                  ><span class="news__tag">イベント・キャンペーン</span>
+                  <br />
+                  <p class="news__title">
+                    【入庫車のご案内】メルセデスベンツG 350が入庫しました
+                  </p>
+                </a>
               </li>
-              <li class="news__main-list--item">
-                <p class="item__date">2022.09.02</p>
-                <span class="news__tag">トピックス</span
-                ><span class="news__tag">イベント・キャンペーン</span>
-                <p class="news__title">お盆休みのご案内</p>
+              <li class="news__main-list--item animated__fadeIn-6">
+                <a href="#" class="news__main-list--link">
+                  <p class="item__date">2022.09.02</p>
+                  <span class="news__tag">トピックス</span
+                  ><span class="news__tag">イベント・キャンペーン</span>
+                  <br />
+                  <p class="news__title">お盆休みのご案内</p>
+                </a>
               </li>
-              <li class="news__main-list--item">
-                <p class="item__date">2022.09.02</p>
-                <span class="news__tag">トピックス</span
-                ><span class="news__tag">イベント・キャンペーン</span>
-                <p class="news__title">
-                  【入庫車のご案内】JEEPラングラー アンリミテッド
-                  サハラが入庫しました
-                </p>
+              <li class="news__main-list--item animated__fadeIn-6">
+                <a href="#" class="news__main-list--link">
+                  <p class="item__date">2022.09.02</p>
+                  <span class="news__tag">トピックス</span
+                  ><span class="news__tag">イベント・キャンペーン</span>
+                  <br />
+                  <p class="news__title">
+                    【入庫車のご案内】JEEPラングラー アンリミテッド
+                    サハラが入庫しました
+                  </p>
+                </a>
               </li>
-              <li class="news__main-list--item">
-                <p class="item__date">2022.09.02</p>
-                <span class="news__tag">トピックス</span
-                ><span class="news__tag">イベント・キャンペーン</span>
-                <p class="news__title">
-                  半導体不足は輸入車・輸入中古車にどう影響するか
-                </p>
+              <li class="news__main-list--item animated__fadeIn-6">
+                <a href="#" class="news__main-list--link">
+                  <p class="item__date">2022.09.02</p>
+                  <span class="news__tag">トピックス</span
+                  ><span class="news__tag">イベント・キャンペーン</span>
+                  <br />
+                  <p class="news__title">
+                    半導体不足は輸入車・輸入中古車にどう影響するか
+                  </p>
+                </a>
               </li>
               <a class="top-button" href="#">
                 READ MORE<img
@@ -279,7 +338,8 @@
               お気軽にお問い合わせください。
             </p>
             <a href="#" class="contact__main--mail">
-              <i class="fa-regular fa-envelope"></i>お問い合わせ
+              <i class="fa-regular fa-envelope"></i
+              ><span class="contact__main--mail-text">お問い合わせ</span>
             </a>
             <p></p>
             <a href="#" class="contact__main--tel">
@@ -325,5 +385,10 @@
         </ul>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
