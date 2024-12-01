@@ -86,21 +86,23 @@
     <!--fv-->
     <section class="fv">
       <div class="position">
-        <img src="images/top__fv1.jpg" alt="トップ画像" />
+        <ul class="fv__list">
+          <li class="fv__list--item bgi1"></li>
+          <li class="fv__list--item bgi2"></li>
+          <li class="fv__list--item bgi3"></li>
+          <li class="fv__list--item bgi4"></li>
+        </ul>
         <h2 class="fv__copy">あなたの<br />日常が目覚める</h2>
       </div>
     </section>
     <!--flow-->
     <section class="flow">
-      <div class="flow__slider" id="js-slick-slider">
-        <ul>
-          <li>Good</li>
-          <li>life</li>
-          <li>for</li>
-          <li>Good</li>
-          <li>Car</li>
-        </ul>
-      </div>
+      <ul class="flow__list">
+        <li class="flow__animation">Good life for Good Car</li>
+        <li class="flow__animation">Good life for Good Car</li>
+        <li class="flow__animation">Good life for Good Car</li>
+        <li class="flow__animation">Good life for Good Car</li>
+      </ul>
     </section>
     <!--about-->
     <main>
@@ -246,19 +248,31 @@
         </div>
       </section>
       <!--news-->
-      <section class="news">
+      <section class="news" id="news">
         <div class="news__wrapper">
           <div class="news__flex">
             <div class="news__side">
               <h3 class="section-title animated__fadeIn-3">News</h3>
               <ul class="news__side-menu animated__fadeIn-5">
                 <div class="news__side-menu--flex">
-                  <li class="news__side-menu--item">すべてのお知らせ</li>
-                  <li class="news__side-menu--item">トピックス</li>
+                  <li class="news__side-menu--item">
+                    <a href="#news" class="menu-item__link selected">
+                      すべてのお知らせ
+                    </a>
+                  </li>
+                  <li class="news__side-menu--item">
+                    <a href="#news" class="menu-item__link">トピックス</a>
+                  </li>
                 </div>
                 <div class="news__side-menu--flex">
-                  <li class="news__side-menu--item">イベント・キャンペーン</li>
-                  <li class="news__side-menu--item">入庫車情報</li>
+                  <li class="news__side-menu--item">
+                    <a href="#news" class="menu-item__link">
+                      イベント・キャンペーン
+                    </a>
+                  </li>
+                  <li class="news__side-menu--item">
+                    <a href="#news" class="menu-item__link">入庫車情報</a>
+                  </li>
                 </div>
               </ul>
             </div>

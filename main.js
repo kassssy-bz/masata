@@ -10,56 +10,37 @@ $(function () {
   });
 });
 
-//slicker
-// 幅を動的に設定
-const setSlickElementsWidth = () => {
-  const elements = document.querySelectorAll("#js-slick-slider li");
-  for (let i = 0; i < elements.length; i++) {
-    const width = elements[i].offsetWidth;
-    elements[i].style.width = `${width}px`; // 幅を設定
-  }
-};
-
-// 文字数に基づいてスピードを設定
-const setTextSpeed = (length) => {
-  return length * 500; // 長さに応じて速度を設定
-};
-
-// slickの設定
-const slickFunction = () => {
-  $("#js-slick-slider ul")
-    .slick({
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 0,
-      speed: setTextSpeed(4), // 初期の速度設定（例: 4文字分の速度）
-      cssEase: "linear",
-      swipe: false,
-      arrows: false,
-      pauseOnFocus: false,
-      pauseOnHover: false,
-      variableWidth: true, // 文字幅に合わせて可変幅にする
-    })
-    .on("afterChange", function (event, slick, currentSlide, nextSlide) {
-      // スライド後に速度を調整
-      switch (currentSlide) {
-        case 3:
-          $(this).slick("slickSetOption", "speed", setTextSpeed(3)); // 3番目のスライド（文字数に応じたスピード設定）
-          break;
-        case 5:
-          $(this).slick("slickSetOption", "speed", setTextSpeed(5)); // 5番目のスライド（文字数に応じたスピード設定）
-          break;
-        default:
-          $(this).slick("slickSetOption", "speed", setTextSpeed(4)); // その他のスライドはデフォルト速度
-          break;
-      }
-    });
-};
-
-window.addEventListener("DOMContentLoaded", () => {
-  setSlickElementsWidth();
-  slickFunction();
+$(".fv__list").slick({
+  autoplay: true, //自動的に動き出すか。初期値はfalse。
+  autoplaySpeed: 2000, //次のスライドに切り替わる待ち時間
+  speed: 1000, //スライドの動きのスピード。初期値は300。
+  infinite: true, //スライドをループさせるかどうか。初期値はtrue。
+  slidesToShow: 1, //スライドを画面に3枚見せる
+  slidesToScroll: 1, //1回のスクロールで3枚の写真を移動して見せる
+  arrows: true, //左右の矢印あり
+  prevArrow: '<div class="slick-prev"></div>', //矢印部分PreviewのHTMLを変更
+  nextArrow: '<div class="slick-next"></div>', //矢印部分NextのHTMLを変更
+  dots: false, //下部ドットナビゲーションの表示
+  pauseOnFocus: false, //フォーカスで一時停止を無効
+  pauseOnHover: false, //マウスホバーで一時停止を無効
+  pauseOnDotsHover: false, //ドットナビゲーションをマウスホバーで一時停止を無効
+  vertical: true,
 });
+
+//メニュー選択時
+document.addEventListener("DOMContentLoaded", () => {
+  const menuItems = document.querySelectorAll(".menu-item__link");
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      // 他のメニュー項目から `active` クラスを削除
+      menuItems.forEach((i) => i.classList.remove("selected"));
+      // クリックされた項目に `active` クラスを追加
+      item.classList.add("selected");
+    });
+  });
+});
+
 // フェードイン
 
 window.addEventListener("load", function () {
