@@ -68,6 +68,7 @@ button {
   font-size: 7rem;
   font-weight: bold;
 }
+
 /*header*/
 .header {
   font-family: "Roboto";
@@ -541,6 +542,8 @@ button {
 }
 .contact img {
   width: 57%;
+  height: 446px;
+  object-fit: cover;
 }
 .contact__right {
   width: 43%;
